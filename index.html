@@ -31,9 +31,15 @@
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Display the result in the element with id="demo"
-    document.getElementById("nedrakning").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+    // Display the result in the element with id="nedrakning"
+    // document.getElementById("nedrakning").innerHTML = days + "d " + hours + "h "
+    //+ minutes + "m " + seconds + "s ";
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
 
     // If the count down is finished, write some text
     if (distance < 0) {
@@ -50,7 +56,26 @@
   <h2>28 juni 2024</h2>
 
    <!-- Display the countdown timer in an element -->
-   <p id="nedrakning" class="countdown"></p>
+   <!--<p id="nedrakning" class="countdown"></p>-->
+
+  <div class="countdown">
+    <div class="block">
+      <span class="brick" id="days"></span>
+      <span>Dagar</span>
+    </div>
+    <div class="block">
+      <span class="brick" id="hours"></span>
+      <span>Timmar</span>
+    </div>
+    <div class="block">
+      <span class="brick" id="minutes"></span>
+      <span>Minuter</span>
+    </div>
+    <div class="block">
+      <span class="brick" id="seconds"></span>
+      <span>Sekunder</span>
+    </div>
+  </div>
 
   <!--<img id="apicture" src="Resources/css/pictures/apicture.png">-->
 
