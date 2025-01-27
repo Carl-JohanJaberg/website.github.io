@@ -175,6 +175,21 @@ ul {
   height: 40vh;
   border-radius: 10px;
 }
+#gallery_1 {
+  margin-top: 40px;
+  padding: 40px;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.gallery-grid img {
+  height: 40vh;
+  border-radius: 5px;
+}
 
 /* Event Details */
 #event-details {
