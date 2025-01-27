@@ -183,11 +183,11 @@ ul {
 .gallery-grid {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 5px;
 }
 
 .gallery-grid img {
-  height: 40vh;
+  height: 50vh;
   border-radius: 10px;
 }
 
