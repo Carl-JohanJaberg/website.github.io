@@ -176,18 +176,18 @@ ul {
   border-radius: 10px;
 }
 #gallery_1 {
-  margin-top: 40px;
+  margin-top: 400px;
   padding: 40px;
 }
 
 .gallery-grid {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: 10px;
 }
 
 .gallery-grid img {
-  height: 40vh;
+  height: 50vh;
   border-radius: 5px;
 }
 
