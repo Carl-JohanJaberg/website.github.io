@@ -158,73 +158,40 @@ ul {
   color: whitesmoke;
 }
 
-
-/* Gallery Section */
 #gallery {
-  margin-top: 40px;
-  padding: 50px;
+  width: 80%; /* Or any width you prefer */
+  max-width: 1200px; /* Optional: Set a max width */
 }
 
-.gallery-grid {
-  display: flex;
-  justify-content: space-between;
+/* Basic grid layout for larger screens */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
   gap: 20px;
 }
 
-.gallery-grid img {
-  height: 40vh;
-  border-radius: 10px;
-}
-#gallery_1 {
-  margin-top: 20px;
-  padding: 20px;
-}
-
-.gallery-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 5px;
-}
-
-.gallery-grid img {
+/* Style for individual items */
+.photo-item img {
+  width: auto;  /* Make sure images fill the container */
   height: 50vh;
-  border-radius: 10px;
-}
-*/New Gallery set up*/
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a little shadow for effect */
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
+/* Media query for very small screens (like mobile devices) */
+@media (max-width: 480px) {
+  .photo-grid {
+    grid-template-columns: 1fr; /* 1 column on small screens */
   }
 }
+
 /* Event Details */
 #event-details {
   display: flex;
