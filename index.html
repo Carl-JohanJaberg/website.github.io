@@ -1,242 +1,165 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link href="main.css" type="text/css" rel="stylesheet">
-    <meta charset="utf-8">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Pinyon+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-    <title>"Carl-Johan & Mimmis wedding"</title>
-  </head>
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Our Wedding</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Pinyon+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 28, 2025 14:00:0").getTime();
 
-  <script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Jun 28, 2025 14:00:0").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-  // Update the count down every 1 second
-  var x = setInterval(function() {
+  // Get today's date and time
+  var now = new Date().getTime();
 
-    // Get today's date and time
-    var now = new Date().getTime();
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // Display the result in the element with id="nedrakning"
+  // document.getElementById("nedrakning").innerHTML = days + "d " + hours + "h "
+  //+ minutes + "m " + seconds + "s ";
 
-    // Display the result in the element with id="nedrakning"
-    // document.getElementById("nedrakning").innerHTML = days + "d " + hours + "h "
-    //+ minutes + "m " + seconds + "s ";
-
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
 
 
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("nedrakning").innerHTML = "EXPIRED";
-    }
-  }, 1000);
-  </script>
-
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("nedrakning").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 <body>
-  <div class="landingpage">
-    <h2>Vi ska gifta oss</h2>
-    <h1>Carl-Johan & Mimmi</h1>
-    <h2>28 juni 2024 ・ Falkenberg</h2>
 
-    <!-- Display the countdown timer in an element -->
-    <!--<p id="nedrakning" class="countdown"></p>
-    <div class="countdown">
-      <div class="block">
-        <span class="brick" id="days"></span>
-        <span>Dagar</span>
-      </div>
-      <div class="block">
-        <span class="brick" id="hours"></span>
-        <span>Timmar</span>
-      </div>
-      <div class="block">
-        <span class="brick" id="minutes"></span>
-        <span>Minuter</span>
-      </div>
-      <div class="block">
-        <span class="brick" id="seconds"></span>
-        <span>Sekunder</span>
-      </div>
-    </div>-->
+  <header>
+    <div class="header-container">
+      <h1>Vi ska gifta oss</h1>
+      <p class="couple-names">Carl-Johan & Mimmi</p>
+      <p class="date">28 juni 2024 ・ Falkenberg</p>
+    </div>
+  </header>
+<!--
+  <section class="countdown">
+    <div class="block">
+      <span class="brick" id="days"></span>
+      <span>Dagar</span>
+    </div>
+    <div class="block">
+      <span class="brick" id="hours"></span>
+      <span>Timmar</span>
+    </div>
+    <div class="block">
+      <span class="brick" id="minutes"></span>
+      <span>Minuter</span>
+    </div>
+    <div class="block">
+      <span class="brick" id="seconds"></span>
+      <span>Sekunder</span>
+    </div>
+</section>
+-->
 
-    
+<section class="details">
+    <img src="Resources/css/pictures2/IMG_1019.jpeg" alt="Gallery Image 2">
+   <div class="details-item">
+    <h1>Ceremoni</h1>
+    <p><strong>Plats:</strong> Morups kyrka</p>
+    <p><strong>Address:</strong> Askhultsvägen 4, 311 90 Morup</p>
+    <p><strong>Datum:</strong> 28 juni 2025</p>
+    <p><strong>Tid:</strong> 14.00</p>
+    <h1>Reception</h1>
+    <p><strong>Plats:</strong> Långås Loge </p>
+    <p><strong>Address:</strong> Långås 331, 311 93 Långås</p>
+    <p><strong>Datum:</strong> 28 juni 2025</p>
+    <p><strong>Tid:</strong> 16.00</p>
+</div> 
 
-  </div>
-
-  <section id="our-story">
-    <div class="container">
-      <div class="story-content">
-            <img src="Resources/css/pictures2/test.png" alt="Bride and Groom">
-            <div>
-              <h2>Vår historia...</h2>
-              <p>För nästan exakt 7år sedan träffades vi för första gången. Året var 2018 och på vår första dejt såg vi EM-matchen mellan Tyskland och Sverige på Nya Ullevi. Det var en nervkittlande match och Sverige förlorade tyvärr med 2-1 efter en tysk frispark i 95:e minuten... Trots att Sverige inte levererade så var det en kväll som bjöd på skratt, fina stunder och några grodor. Sommaren 2018 fortsatte att leverera fina stunder tillsammans och vi blev kära, resten är historia! 
-                </p>
-            </div>
-        </div>
+</section>
+  <section class="our-story">
+    <h1>Vår historia...</h1>
+    <p>För nästan exakt 7år sedan träffades vi för första gången. Året var 2018 och på vår första dejt såg vi EM-matchen mellan Tyskland och Sverige på Nya Ullevi. Det var en nervkittlande match och Sverige förlorade tyvärr med 2-1 efter en tysk frispark i 95:e minuten... Trots att Sverige inte levererade så var det en kväll som bjöd på skratt, fina stunder och några grodor. Sommaren 2018 fortsatte att leverera fina stunder tillsammans och vi blev kära, resten är historia! 
+    </p>
+    <div class="image-grid">
+        <div class="grid-item"><img src="Resources/css/pictures2/IMG_4935.JPG" alt="Gallery Image 7"></div>
+        <div class="grid-item"><img src="Resources/css/pictures2/IMG_0929.jpeg" alt="Gallery Image 3"></div>
+        <div class="grid-item"><img src="Resources/css/pictures2/IMG_0436.jpeg" alt="Gallery Image 1"></div>
+        <div class="grid-item"><img src="Resources/css/pictures2/IMG_3582 (1).jpeg" alt="Gallery Image 2"></div>
+        <div class="grid-item"><img src="Resources/css/pictures2/Cykel.jpg" alt="Gallery Image 5"></div>
+        <div class="grid-item"><img src="Resources/css/pictures2/karaoke.png" alt="Gallery Image 6"></div>
+        <div class="grid-item"><img src="Resources/css/pictures2/IMG_2112.JPG" alt="Gallery Image 8"></div>
+        <div class="grid-item"><img src="Resources/css/pictures2/IMG_1307.JPG" alt="Gallery Image 9"></div>
     </div>
   </section>
 
-  <section id="schedule">
-    <div class="container">
-      <h1>Varmt välkomna att fira denna dag med oss!</h1> 
-      <p>Varmt välkomna att fira vår bröllopsdag tillsammans med oss! Här på hemsidan finns all information samlad som ni kan tänkas behöva.
-      Längst ner på sidan finns anmälningsformuläret för att <a href="#osa">OSA</a>.</p>
-
-      <section class="countdown">
-        <div class="block">
-          <span class="brick" id="days"></span>
-          <span>Dagar</span>
+  <section class="information">
+    <div class="details-grid">
+        <div class="grid-item">
+            <h1>27 juni</h1>
+            <p>Dagen innan bröllopet bjuder vi in till gött häng! Vi hoppas på bra väder då vi planerat några utomhusaktiviteter, se till att packa oömma kläder. Under kvällen bjuder vi på enklare mat och dryck. Ni är givetvis välkommna även om ni inte kan eller vill delta i aktiviteterna, det finns alltid behov av dommare eller poängräknare! Anmälan till förhänget görs i OSA-formuläret längst ner på sidan. Mer information om tid och plats kommer närmre bröllopet. </p>
         </div>
-        <div class="block">
-          <span class="brick" id="hours"></span>
-          <span>Timmar</span>
+        <div class="grid-item">
+            <h1>28 juni</h1>
+            <p>Lördagen den 28 Juni är ni hjärtligt välkomna till vårt bröllop. Vigseln kommer hållas i Morups Kyrka kl 14 och efter vigseln bär det vidare till Långås Loge för brudskål, middag och festligheter. Brudskålen planeras runt kl. 16, dessförinnan finns det dryck, tilltugg och lekar vid logen. Välkommna!</p>
         </div>
-        <div class="block">
-          <span class="brick" id="minutes"></span>
-          <span>Minuter</span>
+        <div class="grid-item">
+            <h1>29 juni</h1>
+            <p>Dagen Efter... Alternativen är många i sommarstaden Falkenberg! Man kan hänga på stranden, njuta på spa, spela lite golf, eller något helt annat! Vi kommer låta ork och väder styra vår dag men se till att ta tillfället i akt att njuta av Falkenberg.</p>
         </div>
-        <div class="block">
-          <span class="brick" id="seconds"></span>
-          <span>Sekunder</span>
-        </div>
-      </section>
-
-<!-- Galleri #1 -->      
-<section id="gallery">
-    <div class="photo-grid">
-      <div class="photo-item"><img src="Resources/css/pictures2/IMG_0436.jpeg" alt="Gallery Image 1"></div>
-        <div class="photo-item"><img src="Resources/css/pictures2/IMG_1019.jpeg" alt="Gallery Image 2"></div>
-          <div class="photo-item"><img src="Resources/css/pictures2/IMG_0929.jpeg" alt="Gallery Image 3"></div>
-            <div class="photo-item"><img src="Resources/css/pictures2/IMG_3582 (1).jpeg" alt="Gallery Image 4"></div>
-              <div class="photo-item"><img src="Resources/css/pictures2/Cykel.jpg" alt="Gallery Image 5"></div>
-                <div class="photo-item"><img src="Resources/css/pictures2/karaoke.png" alt="Gallery Image 6"></div>
-                  <div class="photo-item"><img src="Resources/css/pictures2/IMG_4935.JPG" alt="Gallery Image 7"></div>
-                    <div class="photo-item"><img src="Resources/css/pictures2/IMG_2112.JPG" alt="Gallery Image 8"></div>
-                      <div class="photo-item"><img src="Resources/css/pictures2/IMG_1307.JPG" alt="Gallery Image 9"></div>
     </div>
+  </section>     
+
+<section class="toastmasters">
+    <div class="text-frame">
+        <h1>Toastmasters har ordet!</h1>
+        <p>Tal, lekar, eller andra initiativ uppmuntras och välkomnas!</p>
+        <p>Anmälan av tal eller annat påhitt görs till oss, Annie och David. Vi kommer att vara era guider under kvällen och tillsammans med er skall vi se till att det blir en fantastisk afton.</p>
+        <p>Skicka era bidrag till: david.chlebek97@gmail.com </p>
+    </div>
+    <img src="Resources/css/pictures2/20221112_120626.jpg" alt="Toast Masters">
+
     </section>
-      
-    <!-- Bröllopsinformation -->
-      
-      <h2>Bröllopshelgen 27-29 Juni</h2> 
-        <h3>27 Juni</h3>
-        <div class="schedule-item">
-          <p>Dagen innan bröllopet bjuder vi in till gött häng, vi hoppas på bra väder då vi har planerat ett par utomhusaktiviteter men glöm inte att packa med oömma kläder. Under kvällen kommer det att finnas enklare mat och dryck. Man är givetvis välkommen även om man inte kan eller vill delta i aktiviteterna, det finns alltid behov av dommare eller poängräknare! Anmälan till förhänget görs i OSA-formuläret längst ner på sidan. Mer information om tid och plats kommer närmare bröllopet. </p>
-      </div>
 
-        <h3>28 Juni</h3>
-        <div class="schedule-item">
-          <p>Lördagen den 28 Juni är ni hjärtligt välkomna till vårt bröllop. Vigsel kommer hållas i Morups Kyrka kl 14 och efter vigseln bär det vidare till Långås Loge för brudskål, middag och festligheter. Brudskålen planeras runt kl.16, dessförinnan finns det dryck, tilltugg och lekar vid logen. Välkommna!</p>
-            <div class="event-info">
-                <h3>Cermoni</h3>
-                <p><strong>Var?:</strong> Morups kyrka</p>
-                <p><strong>Address:</strong> Askhultsvägen 4, 311 90 Morup</p>
-                <p><strong>Tid:</strong> 14.00</p>
-            </div>
-            <div class="event-info">
-                <h3>Reception</h3>
-                <p><strong>Var?:</strong> Långås Loge </p>
-                <p><strong>Address:</strong> Långås 331, 311 93 Långås</p>
-                <p><strong>Tid:</strong> 16.00</p>
-            </div>      
-      </div>
-
-        <h3>29 Juni</h3>
-        <div class="schedule-item">
-          <p>Dagen Efter... alternativen är många i sommarstaden Falkenberg, hänga på stranden, spa, golf etc. Vi kommer låta ork och väder styra vår aktivitet men för er andra, ta tillfället i akt att njuta av Falkenberg.</p>
-        </div>
-    </div>
-  </section>
-
-  <section id="nyttig-info">
-    <div class="container"> 
-      <h2>Transport & boende</h2> 
-      <p>Det enkelaste är att ta sig till kyrkan med bil och att sedan åka direkt därifrån till festlokalen.</p>
-      <h3>Buss</h3> 
-      <p> Det går att åka buss mellan kyrkan och festlokalen, buss 553 från Morups kyrka till Långås Morupsvägen (Sök i appen "Hallandstrafiken"). Begränsad mängd avgångar, enklast att försöka samåka. </p>
-      
-      <h3>Parkering</h3>
-      <p>Det finns möjlighet till parkering både vid kyrkan och vid Långås Loge. Utanför festlokalen finns det gott om parkering, vill ni passa på att tälta, ställa upp husbil så går det alldeles utmärkt!</p>
-      
-      <h3>Taxi/Uber</h3> 
-      <p>Det finns följande taxialternativ i Falkenberg, Taxiraketen, Taxi Falkenberg. </p>
-      
-      <h3>Boende</h3>   
-      <p>Det finns gott om ställen att bo på i Falkenberg, allt från det dyrare till det lite billigare alternativet. Förslagsvis Strandbaden, Ocean, Grand Hotel, Nya Pallas, Hotell Hamngatan, Värdshuset Hwitan, Skrea Camping, Hansagårds Camping. </p> 
-    </div>
-    <div class="container">
-      <h2>Klädkod</h2>
-      <h3>Sommarfin</h3>
-      <p>Hel och ren, gärna i den lite ljusare färgskalan.</p>
-    </div>
-  </section>
-    
-    <!-- Presenter till Brudparet -->
-    <section id="schedule">
-    <div class="container">
-      <h2>Presenter till brudparet</h2>
-      <p> Vi önskar inte några presenter till bröllopet. Det viktigaste är att ni vill dela en roligt dag med oss. Vill man trots detta ge en present så uppskattar vi ett bidrag till vår bröllopsresa. Ni kan då swisha till Lovisa Jäberg 0738-44 59 12 som samlar ihop alla swish till brudparet.</p>
-   </div>
-  </section> 
-
-    <!-- Toast masters -->
-    
- <section id="our-story">
-    <div class="container">
-      <div class="story-content">
-            <img src="Resources/css/pictures2/20221112_120626.jpg" alt="Toast Masters">
-            <div>
-              <h2>Toast masters har ordet</h2>
-              <p> Tal, lekar, eller andra Initiativ välkomnas!</p>
-                <p>Anmälan av tal eller annat påhitt görs till oss, Annie och David. Vi kommer att vara er guide under kvällen och tillsammans med er skall vi se till att det blir en fantastisk afton. Skicka era bidrag till: david.chlebek97@gmail.com </p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-
-  <section id="osa"> 
-    <div class="container"> 
-      <h2>Anmälan</h2>
+  <section class="rsvp">
+    <h1>Anmälan</h1>
       <p>OSA Senast den 20 Maj</p>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6bM9ZK0d0ccRXV3iIJfnPrXdqbz65i4JbOUXduBpEI19m5g/viewform?embedded=true" frameborder="0">Loading…</iframe>
-    </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6bM9ZK0d0ccRXV3iIJfnPrXdqbz65i4JbOUXduBpEI19m5g/viewform?embedded=true" frameborder="0">Loading…</iframe>
   </section>
 
   <section> 
-    <div class="container"> 
-      <h2>Kontakt</h2> 
-      <p>Toastmasters
+      <h1>Kontakt</h1> 
+      <p><strong>Toastmasters</strong>
         <br>david.chlebek97@gmail.com</br>
       </p>
-      <p>Brudparet
+      <p><strong>Brudparet</strong>
         <br>Carljohan.jaberg@gmail.com / 0703-37 16 92 </br> 
       </p>
     <!--<img id="lastimg" src="Resources/css/pictures/Banner20242.jpg">-->
       <p>Shoutout till Lovisa som hjälpe oss med hemsidan <3 </p>
-      </div>
   </section>
+  
 
-  </body>
+  <footer>
+  </footer>
 
+  <script src="scripts.js"></script>
 
-  <!-- Footer -->
-<footer>
-  <h1>Kramar, Mimmi & Carl-Johan </h1>
-</footer>
+</body>
+</html>

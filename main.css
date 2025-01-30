@@ -1,262 +1,275 @@
-body {
-  background-color: #f2dbd0;
-  color: black;
-  font-family: "Roboto";
-  font-weight: 200;
-  font-size: 24px;
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and overall design */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dccec6;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header Styling */
+  header {
+    background-image: url(Resources/css/pictures2/png-aura.com-6.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position-x: center;
+    background-position-y: 10rem;
+    text-align: center;
+    /*background: #ffcccb; /* Soft pink */
+    /*color: #fff;
+    text-align: center;*/
+    padding: 10rem 0 40rem 0;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    font-family: "Frank Ruhl Libre";
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #734238;
+  }
+  
+  header .couple-names {
+    font-size: 6rem;
+    font-weight: bold;
+    font-family: "Parisienne";
+    color: rgb(254, 251, 249);
+  }
+
+  header .date {
+    font-size: 2rem;
+    font-family: "Frank Ruhl Libre";
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #734238;
+  }
+
+ 
+  
+  .block {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 40px 10px 40px 10px;
+    text-align: center;
+    font-family: "Frank Ruhl Libre";
+  }
+  
+  .brick {
+    background-color: #c18a7f;
+    width: 110px;
+    height: 110px;
+    align-content: center;
+    border-radius: 100%;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 10px;
+  }
+  
+  /* Section styling */
+  section {
+    padding: 40px;
+    margin: 60px 100px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  section h1 {
+    font-family: "Parisienne";
+    color: #734238;
+    font-size: 70px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  section p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .countdown {
+    color: #dccec6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .information h1 {
+    text-align: center;
 }
 
-section {
-  margin: 80px 0;
+.details {
+    display: flex;
+    flex-direction: row;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
+.details div {
+    margin: 0 4rem;
+    width: 50%;
 }
 
-h1 {
-  font-family: "Parisienne";
-  color: rgb(254, 251, 249);
-  font-size:120px;
-  font-weight:bold;
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: center;
+.details img {
+    height: auto;
+    width: 30%;
+    object-fit: cover;
+}
+
+.information .details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;  /* Adds space between the items */
+    margin: 20px;
+}
+
+.information .grid-item {
+    flex: 1 1 calc(33.333% - 20px); /* 3 items in a row with a gap */
+    height: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.our-story p {
+    padding-bottom: 40px;
 }
   
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Flexible grid */
+    gap: 15px;
+    max-width: 100%;
+    margin: 0 auto;
+    }
 
-h2 {
-  font-family: "Frank Ruhl Libre";
-  font-size: 30px;
-  font-weight: 100;
-  text-transform: uppercase;
-  color: #734238;
-  margin: 10px 0 10px 0;
-  text-align: center
-}
+    .grid-item {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* Creates a square aspect ratio by default */
+        position: relative; /* So images can be absolutely positioned inside */
+        overflow: hidden; /* Ensures images don’t overflow their containers */
+    }
 
-h3 {
-  font-family: "Frank Ruhl Libre";
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #734238;
-  margin: 10px 0 10px 0;
-}
+    .grid-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures images cover the area without stretching/distorting */
+    }
 
-ul {
-  color: black;
-  height: 100vh;
-  margin: 0;
-}
+    .toastmasters {
+        display: flex;
+        flex-direction: row;
+        text-align: right;
+    }
 
-.landingpage {
-  height: 110vh;
-  background-image: url(Resources/css/pictures2/png-aura.com-6.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 60px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 200px;
-}
+    .toastmasters img {
+        height: auto;
+        width: 30%;
+        object-fit: cover;
+    }
 
-.landingpage h2 {
-  color: #c18a7f;
-  font-size: 35px;
-}
+    .toastmasters .text-frame {
+        padding-right: 4rem;
+    }
 
-.countdown {
-  color: #c18a7f;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.block {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  font-size: 30px;
-  margin: 40px 10px 40px 10px;
-  text-align: center;
-}
-
-.brick {
-  background-color: #ffffff;
-  width: 110px;
-  height: 110px;
-  align-content: center;
-  border-radius: 5px;
-  font-size: 40px;
-  font-weight: 400;
-  margin: 10px;
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #e9ddd2;
-  overflow: hidden;
-  height: 40px;
-  align-content: center;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #a2beb0;
-  color: white;
-}
-
-/* Story Section */
-#our-story {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 50px 0;
-  /*background-color: #5a665b;*/
-  background-color: #d3aea1;
-}
-
-#our-story h2 {
-  text-align: left;
-}
-
-.story-content {
-  display: flex;
-}
-
-.story-content img {
-  width: 30%;
-  margin-right: 60px;
-}
-
-.story-content div {
-  margin: auto;
-}
-
-.story-content p {
-  font-size: 30px;
-  margin-top: 0px;
-  color: whitesmoke;
-}
-
-#gallery {
-  width: 80%; /* Or any width you prefer */
-  max-width: 1200px; /* Optional: Set a max width */
-}
-
-/* Basic grid layout for larger screens */
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
-  gap: 20px;
-}
-
-/* Style for individual items */
-.photo-item img {
-  width: auto;  /* Make sure images fill the container */
-  height: 50vh;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a little shadow for effect */
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
+    .rsvp {
+        text-align: center;
+    }
+  
+    iframe {
+    height: 120vh;
+    width: 100%;
+    margin: auto; /* Center the container horizontally */
   }
-}
 
-/* Media query for very small screens (like mobile devices) */
-@media (max-width: 480px) {
-  .photo-grid {
-    grid-template-columns: 1fr; /* 1 column on small screens */
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
   }
-}
-
-/* Event Details */
-#event-details {
-  display: flex;
-  flex-direction: column;
-}
-
-
-#schedule h1 {
-  font-size: 50px;
-}
-
-#schedule h2 {
-  margin: 50px 0;
-}
-
-.schedule-item {
-  background-color: whitesmoke;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.schedule-item-right {
-  text-align: right;
-  width: 50%;
-  margin-right: 52%;
-}
-
-.schedule-item-left {
-  text-align: left;
-  width: 50%;
-  margin-left: 52%;
-}
-
-.ulHalltider {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding for the list */ 
-  font-size: 20px;
-}
-
-#nyttig-info {
-  background-color:#d3aea1;
-  display: flex;
-  flex-direction: row;
-  padding: 50px;
-}
-
-#nyttig-info {
-  .container {
-    width: 50%;
-    padding: 50px;
+  
+  footer p {
+    font-size: 0.9rem;
   }
-}
 
-iframe {
-  height: 120vh;
-  width: 100%;
-  margin: auto; /* Center the container horizontally */
-}
+  @media (max-width: 1200px) {
+    header {
+        background-position-y: 20rem;
+        padding: 10rem 0 34rem 0;
+    }
 
-footer {
-  padding: 60px;
-  margin: auto;
-}
+    .information .grid-item {
+        flex: 1 1 100%;  /* 1 item per row on smaller screens */
+      }
+    
+  }
 
-footer h1 {
-  font-size: 40px;
-}
+  @media (max-width: 1000px) {
+    header {
+        background-position-y: 26rem;
+        padding: 10rem 0 34rem 0;
+    }
+    
+  }
+  
+  /* Media Query for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    header {
+        background-image: none;
+        padding: 10rem 0 10rem 0;
+    }
 
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    section {
+        padding: 40px;
+        margin: 20px;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+
+    .details img {
+        width: 100%;
+    }
+
+    .details div {
+        margin: 20px auto;
+    }
+
+    .toastmasters {
+        flex-direction: column;
+    }
+
+    .toastmasters img {
+        width: 100%;
+    }
+
+    .toastmasters .text-frame {
+        padding-right: 0;
+    }
+  
+  }
+  
