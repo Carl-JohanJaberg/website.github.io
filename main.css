@@ -11,15 +11,14 @@
     background-color: #dccec6;
     color: #333;
     line-height: 1.6;
+    background-image: url(Resources/css/pictures2/image-from-rawpixel-id-16340933-png.png);
+    background-attachment: fixed;
+    background-size: cover; /* Optional, to cover the entire viewport */
+    background-position: center; /* Optional, to center the image */
   }
   
   /* Header Styling */
   header {
-    background-image: url(Resources/css/pictures2/png-aura.com-6.png);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position-x: center;
-    background-position-y: 10rem;
     text-align: center;
     /*background: #ffcccb; /* Soft pink */
     /*color: #fff;
@@ -50,8 +49,6 @@
     color: #734238;
   }
 
- 
-  
   .block {
     margin: 10px;
     display: flex;
@@ -78,7 +75,7 @@
   /* Section styling */
   section {
     padding: 40px;
-    margin: 60px 100px;
+    margin: 0 100px 60px 100px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
