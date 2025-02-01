@@ -173,7 +173,7 @@
     .toastmasters {
         display: flex;
         flex-direction: row;
-        text-align: right;
+        text-align: left;
     }
 
     .toastmasters img {
