@@ -13,10 +13,10 @@
     color: #333;
     line-height: 1.6;
     background-image: url(Resources/css/pictures2/image-from-rawpixel-id-16340933-png.png);
-    background-attachment: fixed;
-    background-size: cover;  /* This makes the image cover the entire screen */
     background-position: center center;  /* Centers the image */
     background-repeat: no-repeat;  /* Ensures the image doesn’t repeat */
+    background-attachment: fixed;  /* Keeps the image fixed (you may want to disable on small screens) */
+    background-size: cover;  /* Default for larger screens */
   }
   
   /* Header Styling */
@@ -237,9 +237,21 @@
   }
 
   @media (max-width: 1200px) {
+    body {
+        background-image: none; /*
+        background-size: cover;  
+        background-attachment: fixed;  
+        background-position-y: -55rem;
+        background-position-x: -42rem;*/
+    }
+
     header {
-        background-position-y: 20rem;
-        padding: 10rem 0 34rem 0;
+        background-image: url(Resources/css/pictures2/image-from-rawpixel-id-16340933-png.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-position-x: center;
+        background-position-y: -20rem;
+        padding: 10rem 0 20rem 0;
     }
 
     .information .grid-item {
@@ -312,6 +324,14 @@
     }
 
     @media (max-width: 350px) {
+        body {
+            background-image: none;/* 
+            background-size: cover; 
+            background-attachment: fixed;  
+            background-position-y: -100rem;
+            background-position-x: -100rem;*/
+        }
+        
         header h1 {
             font-size: 1.2rem;
           }
