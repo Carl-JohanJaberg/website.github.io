@@ -14,8 +14,9 @@
     line-height: 1.6;
     background-image: url(Resources/css/pictures2/image-from-rawpixel-id-16340933-png.png);
     background-attachment: fixed;
-    background-size: cover; /* Optional, to cover the entire viewport */
-    background-position: center; /* Optional, to center the image */
+    background-size: cover;  /* This makes the image cover the entire screen */
+    background-position: center center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Ensures the image doesn’t repeat */
   }
   
   /* Header Styling */
@@ -40,6 +41,7 @@
     font-weight: bold;
     font-family: "Parisienne";
     color: rgb(254, 251, 249);
+    letter-spacing: -0.9px;
   }
 
   header .date {
@@ -156,14 +158,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;  /* Adds space between the items */
-    margin: 20px;
+    gap: 1rem;  /* Adds space between the items */
+    margin: 1rem;
 }
 
 .information .grid-item {
     flex: 1 1 calc(33.333% - 20px); /* 3 items in a row with a gap */
     height: fit-content;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 5px;
 }
 
@@ -253,7 +255,7 @@
     }
 
     header .couple-names {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     header .date {
@@ -272,6 +274,11 @@
     section h2 {
         font-size: 1.5rem;
     }
+
+    section p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
 
     .details {
         flex-direction: column;
@@ -302,6 +309,40 @@
 
     .toastmasters .text-frame {
         padding-right: 0;
+    }
+
+    @media (max-width: 350px) {
+        header h1 {
+            font-size: 1.2rem;
+          }
+      
+          header .couple-names {
+              font-size: 2.2rem;
+          }
+          
+          header .date {
+              font-size: 1.2rem;
+          }
+
+          .image-grid {
+            grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr)); /* Flexible grid */
+            gap: 5px;
+        }
+
+        section h1 {
+            font-size: 2rem;
+        }
+    
+        section h2 {
+            font-size: 1.2rem;
+        }
+
+        section p {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+          }
+
+          
     }
   
   }
