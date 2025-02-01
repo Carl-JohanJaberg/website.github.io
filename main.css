@@ -7,8 +7,9 @@
   
   /* Body and overall design */
   body {
-    font-family: 'Arial', sans-serif;
-    background-color: #dccec6;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2rem;
+    background-color: #e8dfda;
     color: #333;
     line-height: 1.6;
     background-image: url(Resources/css/pictures2/image-from-rawpixel-id-16340933-png.png);
@@ -31,7 +32,7 @@
     font-family: "Frank Ruhl Libre";
     font-weight: 100;
     text-transform: uppercase;
-    color: #734238;
+    color: #2c3251;
   }
   
   header .couple-names {
@@ -46,7 +47,7 @@
     font-family: "Frank Ruhl Libre";
     font-weight: 100;
     text-transform: uppercase;
-    color: #734238;
+    color: #2c3251;
   }
 
   .block {
@@ -83,18 +84,23 @@
 
   section h1 {
     font-family: "Parisienne";
-    color: #734238;
+    color: #2c3251;
+    /*color: #734238; Gamla färgen*/
     font-size: 4rem;
+    margin-bottom: 1rem;
   }
   
   section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    font-family: "Frank Ruhl Libre";
+    font-weight: 400;
+    color: #2c3251;
+    margin: 1rem 0;
   }
   
   section p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .countdown {
@@ -108,6 +114,7 @@
 
   .information h1 {
     text-align: center;
+    color: #2c3251;
 }
 
 .details {
@@ -115,15 +122,34 @@
     flex-direction: row;
 }
 
-.details div {
-    margin: 0 4rem;
-    width: 50%;
+.details .details-container {
+    margin-left: 2rem;
+}
+
+.details-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.details-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.details .details-h1 {
+    font-size: 2rem;
+    font-family: "Frank Ruhl Libre";
+    font-weight: 100;
+    color: #734238;
 }
 
 .details img {
     height: auto;
     width: 30%;
     object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .information .details-grid {
@@ -145,7 +171,7 @@
     padding-bottom: 40px;
 }
   
-  .image-grid {
+    .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Flexible grid */
     gap: 15px;
@@ -189,7 +215,7 @@
     .rsvp {
         text-align: center;
     }
-  
+
     iframe {
     height: 120vh;
     width: 100%;
@@ -216,20 +242,12 @@
 
     .information .grid-item {
         flex: 1 1 100%;  /* 1 item per row on smaller screens */
-      }
-    
-  }
-
-  @media (max-width: 1000px) {
-    header {
-        background-position-y: 26rem;
-        padding: 10rem 0 34rem 0;
     }
-    
-  }
-  
-  /* Media Query for Mobile Responsiveness */
-  @media (max-width: 600px) {
+
+    .details .details-container {
+        margin-left: 0;
+    }
+
     header {
         background-image: none;
         padding: 10rem 0 10rem 0;
@@ -252,6 +270,10 @@
         margin: 20px;
     }
 
+    section h1 {
+        font-size: 3rem;
+    }
+
     .details {
         flex-direction: column;
     }
@@ -260,8 +282,13 @@
         width: 100%;
     }
 
-    .details div {
-        margin: auto;
+    .details h1 {
+
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); /* Flexible grid */
+        gap: 5px;
     }
 
     .toastmasters {
