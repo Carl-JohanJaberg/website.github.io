@@ -229,7 +229,7 @@
   }
   
   /* Media Query for Mobile Responsiveness */
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     header {
         background-image: none;
         padding: 10rem 0 10rem 0;
