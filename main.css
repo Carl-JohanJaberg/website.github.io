@@ -238,19 +238,15 @@
 
   @media (max-width: 1200px) {
     body {
-        background-image: none; /*
-        background-size: cover;  
-        background-attachment: fixed;  
-        background-position-y: -55rem;
-        background-position-x: -42rem;*/
+        background-image: none;
     }
 
     header {
         background-image: url(Resources/css/pictures2/image-from-rawpixel-id-16340933-png.png);
         background-repeat: no-repeat;
         background-attachment: fixed;  
-        background-position-x: center;
-        background-position-y: -20rem;
+        background-position-x: 38%;
+        background-position-y: -22rem;
         padding: 10rem 0 20rem 0;
     }
 
@@ -325,11 +321,7 @@
 
     @media (max-width: 350px) {
         body {
-            background-image: none;/* 
-            background-size: cover; 
-            background-attachment: fixed;  
-            background-position-y: -100rem;
-            background-position-x: -100rem;*/
+            background-image: none;
         }
         
         header h1 {
