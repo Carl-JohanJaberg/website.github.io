@@ -41,7 +41,7 @@
     font-weight: bold;
     font-family: "Parisienne";
     color: rgb(254, 251, 249);
-    letter-spacing: -0.9px;
+    letter-spacing: -0.05rem;
   }
 
   header .date {
