@@ -236,18 +236,17 @@
     font-size: 0.9rem;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     body {
-        background-image: none;
+        background-image: url(Resources/css/pictures2/blå\ blomma\ small\ screens.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: contain;  /* Default for larger screens */    
+        background-position-y: 8rem;
     }
 
     header {
-        background-image: url(Resources/css/pictures2/image-from-rawpixel-id-16340933-png.png);
-        background-repeat: no-repeat;
-        background-attachment: fixed;  
-        background-position-x: 38%;
-        background-position-y: -22rem;
-        padding: 10rem 0 20rem 0;
+        padding: 10rem 0 40rem 0;
     }
 
     .information .grid-item {
@@ -321,7 +320,13 @@
 
     @media (max-width: 350px) {
         body {
-            background-image: none;
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: contain;  /* Default for larger screens */
+            background-position-y: 0;        }
+
+        header {
+            padding: 10rem 0 10rem 0;
         }
         
         header h1 {
